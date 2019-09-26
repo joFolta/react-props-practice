@@ -1,15 +1,15 @@
 import React from "react"
-import Joke from "./Joke"
+import Joke from "./Joke.js"
+import jokesData from "./jokesData.js"
 
 function App(){
+    const jokeComponents = jokesData.map(joke => 
+        <Joke key={joke.id} question={joke.question} answer={joke.answer}/>
+    )
+    console.log(jokeComponents)
     return(
         <div>
-            <Joke answer="It’s hard to explain puns to kleptomaniacs because they always take things literally." />
-            <Joke question="Who are you" answer="Han"/>
-            <Joke question="Where are you from?" answer="Boston"/>
-            <Joke question="How are you feeling today" answer="Not bad. I skated into work today and am feeling strong and healthy!"/>
-            <Joke question="Why do you enjoy the outdoors?" answer="The air is fresh and I love being in touch with nature"/>
-            <Joke question="Will you meet me at the zoo next week?" answer="Let's do it! That would be fun."/>
+            {jokeComponents}
         </div>
     )
 }
