@@ -4,6 +4,7 @@ import Joke from "./Joke"
 function App(){
     return(
         <div>
+            <Joke answer="It’s hard to explain puns to kleptomaniacs because they always take things literally." />
             <Joke question="Who are you" answer="Han"/>
             <Joke question="Where are you from?" answer="Boston"/>
             <Joke question="How are you feeling today" answer="Not bad. I skated into work today and am feeling strong and healthy!"/>

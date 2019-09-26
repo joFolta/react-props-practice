@@ -4,8 +4,8 @@ function Joke(props){
     console.log(props)
     return (
         <div>
-            <h3>Question: {props.question}</h3>
-            <p>Answer: {props.answer}</p>
+            <h3 style={{display: props.question ? "block":"none"}}>Question: {props.question}</h3>
+            <p style={{color: props.question ? "blue":"red"}}>Answer: {props.answer}</p>
             <hr/>
         </div>    
     )
